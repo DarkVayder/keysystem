@@ -5,6 +5,7 @@ import Trust from './components/Trust';
 import Offer from './components/Offer';
 import Represent from './components/Represent';
 import Compliance from './components/Compliance';
+import TheyTrustUs from './components/TheyTrustUs';
 // App component
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Offer />
       <Represent />
       <Compliance />
+      <TheyTrustUs />
     </>
   )
 }
