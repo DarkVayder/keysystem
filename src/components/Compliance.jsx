@@ -24,29 +24,29 @@ const Compliance = () => {
         <h1 className="text-3xl sm:text-4xl font-bold mb-4">Standards We Specialize In</h1>
         <p className="text-gray-300 text-lg">Elevate Your Organization's Security Posture with Our</p>
         <p className="text-gray-300 text-lg mb-6">Compliance/Standards Consulting Services</p>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full transition duration-300">
+        <button className="bg-gradient-to-r from-[#000080] to-[#4169E1] hover:from-[#4169E1] hover:to-[#000080] text-white font-semibold px-6 py-2 rounded-full transition duration-300">
           Contact Us
         </button>
       </div>
 
       {/* Grid Section */}
-      <div className="bg-white rounded-xl py-12 px-6 sm:px-12">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-8 justify-items-center">
-          <img src={CC1} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC2} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC3} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC4} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC5} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC6} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC7} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC8} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC9} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC10} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC11} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC12} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC13} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC14} alt="cert" className="w-28 h-auto object-contain" />
-          <img src={CC18} alt="cert" className="w-28 h-auto object-contain" />
+      <div className="bg-white rounded-xl py-12 px-6 sm:px-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 justify-items-center">
+          <img src={CC1} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC2} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC3} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC4} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC5} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC6} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC7} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC8} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC9} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC10} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC11} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC12} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC13} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC14} alt="cert" className="w-24 h-auto object-contain" />
+          <img src={CC18} alt="cert" className="w-24 h-auto object-contain" />
         </div>
       </div>
     </div>
