@@ -7,6 +7,7 @@ import Represent from './components/Represent';
 import Compliance from './components/Compliance';
 import TheyTrustUs from './components/TheyTrustUs';
 import Process from './components/Process';
+import Partner from './components/Partner';
 // App component
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Compliance />
       <TheyTrustUs />
       <Process />
+      <Partner />
     </>
   )
 }
