@@ -8,6 +8,7 @@ import Compliance from './components/Compliance';
 import TheyTrustUs from './components/TheyTrustUs';
 import Process from './components/Process';
 import Partner from './components/Partner';
+import GetStarted from './components/GetStarted';
 // App component
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <TheyTrustUs />
       <Process />
       <Partner />
+      <GetStarted />
     </>
   )
 }

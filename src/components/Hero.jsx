@@ -29,9 +29,9 @@ const Hero = () => {
         </h1>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button className="bg-[#4169E1] hover:bg-blue-600 hover:scale-105 hover:shadow-lg text-white font-semibold px-6 py-2 rounded-full transition duration-300">
-            Get Started
-          </button>
+        <button className="bg-gradient-to-r from-[#000080] to-[#4169E1] hover:from-[#4169E1] hover:to-[#000080] text-white font-semibold px-6 py-2 rounded-full transition duration-300">
+          Get Started
+        </button>
           <button className="border border-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition duration-300">
             Learn More
           </button>
