@@ -6,6 +6,7 @@ import Offer from './components/Offer';
 import Represent from './components/Represent';
 import Compliance from './components/Compliance';
 import TheyTrustUs from './components/TheyTrustUs';
+import Process from './components/Process';
 // App component
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Represent />
       <Compliance />
       <TheyTrustUs />
+      <Process />
     </>
   )
 }
