@@ -14,9 +14,9 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="md:col-span-2 grid grid-cols-2 gap-x-8 gap-y-4">
+        <div className="text-gray-400 md:col-span-2 grid grid-cols-2 gap-x-8 gap-y-4">
           <div>
-            <h2 className="font-bold text-base mb-4">SERVICES</h2>
+            <h2 className="font-bold text-2xl mb-2">SERVICES</h2>
             <ul className="space-y-1">
               <li>Core refresh</li>
               <li>Application management services</li>
@@ -26,7 +26,7 @@ const Footer = () => {
               <li>Online/mobile lending solution</li>
             </ul>
           </div>
-          <div className="pt-2 md:pt-6">
+          <div className="pt-2 mt-4 md:pt-6">
             <ul className="space-y-1">
               <li>Staff augmentation solutions</li>
               <li>Risk management & Internal audit solutions</li>
@@ -41,18 +41,19 @@ const Footer = () => {
 
       {/* Middle Grid */}
       <div className="max-w-7xl mx-auto mt-12 grid md:grid-cols-4 gap-10 md:gap-16">
-        <div className="md:col-span-2 grid grid-cols-2 gap-x-8 gap-y-4">
-          <div>
-            <h2 className="font-bold text-base mb-4">QUICK LINKS</h2>
-            <ul className="space-y-1">
-              <li>About Us</li>
-              <li>Sitemap</li>
-            </ul>
-          </div>
+        <div>
+          <h2 className="font-bold text-2xl text-gray-400 mb-4">QUICK LINKS</h2>
+          <ul className="space-y-1 text-gray-400">
+            <li>About Us</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
 
-          <div>
-            <h2 className="font-bold text-base mb-4">CONTACT</h2>
-            <div className="space-y-4">
+        <div className="text-gray-400 md:col-span-2">
+          <h2 className="font-bold text-2xl text-gray-400 mb-4">CONTACT</h2>
+          <div className="space-y-6">
+            {/* Address block */}
+            <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <p className="font-semibold text-white">Nigeria</p>
                 <p>55G Adebisi Omotola Close,</p>
@@ -65,20 +66,23 @@ const Footer = () => {
                 <p>Moston, Manchester, United Kingdom, M40 9JG</p>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div>
-          <p className="font-semibold">United Kingdom</p>
-          <p>Tel: +44 161 948 1444</p>
-        </div>
-        <div>
-          <p className="font-semibold">United Arab Emirates</p>
-          <p>Tel: +971 50 423 8817</p>
-        </div>
-        <div>
-          <p className="font-semibold">Canada</p>
-          <p>Tel: +1 647 977 1435</p>
+            {/* Horizontal contact numbers */}
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-gray-300 pt-2">
+              <div>
+                <p className="font-semibold text-white">United Kingdom</p>
+                <p>Tel: +44 161 948 1444</p>
+              </div>
+              <div>
+                <p className="font-semibold text-white">United Arab Emirates</p>
+                <p>Tel: +971 50 423 8817</p>
+              </div>
+              <div>
+                <p className="font-semibold text-white">Canada</p>
+                <p>Tel: +1 647 977 1435</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -91,11 +95,12 @@ const Footer = () => {
           <FaFacebookF className="hover:text-white cursor-pointer" />
         </div>
 
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 text-center md:text-left">
           <p className="font-semibold">Nigeria</p>
           <p>Tel: +234 818 444 1404</p>
         </div>
-        <div className="md:col-span-2">
+
+        <div className="md:col-span-2 text-center md:text-left">
           <p className="font-semibold">Email</p>
           <p>enquiries@keysystemltd.com</p>
         </div>
