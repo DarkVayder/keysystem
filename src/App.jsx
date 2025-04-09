@@ -9,6 +9,7 @@ import TheyTrustUs from './components/TheyTrustUs';
 import Process from './components/Process';
 import Partner from './components/Partner';
 import GetStarted from './components/GetStarted';
+import Footer from './components/Footer';
 // App component
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Process />
       <Partner />
       <GetStarted />
+      <Footer />
     </>
   )
 }
