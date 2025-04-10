@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link for routing
 import { FiPhone, FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const menuItems = ['Home', 'About', 'Services', 'Contact'];
+  const menuItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Contact', path: '/contact' },
+  ];
 
   return (
     <>
@@ -23,11 +29,11 @@ const Navbar = () => {
               <li
                 key={index}
                 className={`cursor-pointer hover:text-gray-300 hover:border-b-2 hover:border-gray-300 pb-1 transition duration-200 ${
-                  item === 'Services' ? 'flex items-center gap-1' : ''
+                  item.name === 'Services' ? 'flex items-center gap-1' : ''
                 }`}
               >
-                {item}
-                {item === 'Services' && <FiChevronDown size={16} />}
+                <Link to={item.path}>{item.name}</Link> {/* Add Link here */}
+                {item.name === 'Services' && <FiChevronDown size={16} />}
               </li>
             ))}
           </ul>
@@ -45,12 +51,14 @@ const Navbar = () => {
                 size={28}
                 onClick={() => setMenuOpen(false)}
                 className="cursor-pointer text-white"
+                aria-label="Close Menu"
               />
             ) : (
               <FiMenu
                 size={28}
                 onClick={() => setMenuOpen(true)}
                 className="cursor-pointer text-white"
+                aria-label="Open Menu"
               />
             )}
           </div>
@@ -59,17 +67,20 @@ const Navbar = () => {
 
       {/* Fullscreen Mobile Menu */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-[linear-gradient(90.18deg,_#05071E_50.58%,_#000080_79.08%,_#111A89_90.72%)] text-white z-40 flex flex-col items-center justify-center space-y-8">
+        <div
+          className="fixed inset-0 bg-[linear-gradient(90.18deg,_#05071E_50.58%,_#000080_79.08%,_#111A89_90.72%)] text-white z-40 flex flex-col items-center justify-center space-y-8 transition-all duration-300"
+          aria-expanded={menuOpen}
+        >
           <ul className="flex flex-col items-center gap-6 text-xl font-medium">
             {menuItems.map((item, index) => (
               <li
                 key={index}
                 className={`cursor-pointer hover:text-gray-300 transition ${
-                  item === 'Services' ? 'flex items-center gap-1' : ''
+                  item.name === 'Services' ? 'flex items-center gap-1' : ''
                 }`}
               >
-                {item}
-                {item === 'Services' && <FiChevronDown size={16} />}
+                <Link to={item.path}>{item.name}</Link> {/* Add Link here */}
+                {item.name === 'Services' && <FiChevronDown size={16} />}
               </li>
             ))}
           </ul>
