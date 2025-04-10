@@ -13,7 +13,7 @@ const Sponsors = () => {
     <div className="relative bg-[#050617] py-10 overflow-hidden">
       {/* Sponsor Scrolling Animation */}
       <motion.div
-        className="flex justify-start space-x-12"
+        className="flex justify-start space-x-12 will-change-transform"
         animate={{
           x: ["100%", "-100%"]  // Move from right (100%) to left (-100%)
         }}
@@ -24,6 +24,14 @@ const Sponsors = () => {
         }}
       >
         {/* Sponsor Images */}
+        <img src={sponsor1} alt="Sponsor 1" className="w-32 h-auto object-contain" />
+        <img src={sponsor2} alt="Sponsor 2" className="w-32 h-auto object-contain" />
+        <img src={sponsor3} alt="Sponsor 3" className="w-32 h-auto object-contain" />
+        <img src={sponsor4} alt="Sponsor 4" className="w-32 h-auto object-contain" />
+        <img src={sponsor5} alt="Sponsor 5" className="w-32 h-auto object-contain" />
+        <img src={sponsor6} alt="Sponsor 6" className="w-32 h-auto object-contain" />
+        <img src={sponsor7} alt="Sponsor 7" className="w-32 h-auto object-contain" />
+        {/* Repeat the images to create an infinite scroll effect */}
         <img src={sponsor1} alt="Sponsor 1" className="w-32 h-auto object-contain" />
         <img src={sponsor2} alt="Sponsor 2" className="w-32 h-auto object-contain" />
         <img src={sponsor3} alt="Sponsor 3" className="w-32 h-auto object-contain" />
