@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link for routing
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; 
 import { FiPhone, FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false); // State to track scroll
 
   const menuItems = [
     { name: 'Home', path: '/' },
@@ -13,10 +14,30 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  // Effect hook to detect scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(window.scrollY > 50); // Change state when scrolled more than 50px
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Set initial scroll position
+    if (window.scrollY > 50) {
+      setIsScrolling(true);
+    }
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      {/* Main Navbar */}
-      <div className="bg-[linear-gradient(90.18deg,_#05071E_50.58%,_#000080_79.08%,_#111A89_90.72%)] text-white relative z-50">
+      {/* Main Navbar with scroll effect */}
+      <div
+        className={`${
+          isScrolling ? 'bg-neutral-900 bg-opacity-80 backdrop-blur-md' : ''
+        } bg-[linear-gradient(90.18deg,_#05071E_50.58%,_#000080_79.08%,_#111A89_90.72%)] text-white fixed top-0 left-0 w-full z-50 transition-all duration-300`}
+      >
         <div className="flex justify-between items-center px-6 py-4">
           {/* Logo */}
           <div>
@@ -32,7 +53,7 @@ const Navbar = () => {
                   item.name === 'Services' ? 'flex items-center gap-1' : ''
                 }`}
               >
-                <Link to={item.path}>{item.name}</Link> {/* Add Link here */}
+                <Link to={item.path}>{item.name}</Link>
                 {item.name === 'Services' && <FiChevronDown size={16} />}
               </li>
             ))}
@@ -79,7 +100,7 @@ const Navbar = () => {
                   item.name === 'Services' ? 'flex items-center gap-1' : ''
                 }`}
               >
-                <Link to={item.path}>{item.name}</Link> {/* Add Link here */}
+                <Link to={item.path}>{item.name}</Link>
                 {item.name === 'Services' && <FiChevronDown size={16} />}
               </li>
             ))}
