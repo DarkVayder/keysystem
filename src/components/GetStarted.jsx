@@ -17,9 +17,10 @@ const GetStarted = () => {
           <p className="text-base mb-4">their career to the next level by enrolling in one of our training programs today.</p>
 
           <div className="mt-4">
-            <button className="bg-gradient-to-r from-[#000080] to-[#4169E1] text-white font-semibold cursor-pointer px-6 py-2 rounded-full hover:brightness-110 transition duration-300">
-              Send Us a Mail Now
-            </button>
+          <button className="bg-gradient-to-r from-[#000080] to-[#4169E1] hover:from-[#1E90FF] hover:to-[#6495ED] text-white font-semibold cursor-pointer px-6 py-2 rounded-full transition-all duration-300 shadow-md">
+  Send Us a Mail Now
+</button>
+
           </div>
         </div>
 
