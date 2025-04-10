@@ -18,9 +18,10 @@ const Offer = () => {
 
       {/* CTA Button */}
       <div className="mb-12">
-        <button className="bg-gradient-to-r from-[#000080] to-[#4169E1] hover:from-[#4169E1] hover:to-[#000080] text-white font-semibold px-8 py-3 rounded-full transition duration-300">
-          Learn More
-        </button>
+      <button className="bg-gradient-to-r from-[#000080] to-[#4169E1] hover:from-[#1E90FF] hover:to-[#6495ED] text-white font-semibold cursor-pointer px-6 py-2 rounded-full transition-all duration-300 shadow-md">
+  Learn More
+</button>
+
       </div>
 
       {/* Smaller Offer Images */}
