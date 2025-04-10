@@ -30,7 +30,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Contact Form */}
         <div className="mt-10 md:mt-0">
-          <h2 className="font-semibold text-white text-2xl mb-4">Send Us a Message</h2>
+          <h2 className="font-semibold text-white text-2xl pt-6 mb-4">Send Us a Message</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm text-gray-400 mb-2">Your Name</label>
