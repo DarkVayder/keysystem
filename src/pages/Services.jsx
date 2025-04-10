@@ -6,7 +6,7 @@ const Service = () => {
       <div className="max-w-6xl mx-auto text-sm">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gradient mb-6">Our Expert Services</h1>
+          <h1 className="text-4xl font-extrabold text-gradient pt-6 mb-6">Our Expert Services</h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
             At KeySystem, we provide comprehensive solutions to drive efficiency, security, and growth for your business. Explore our range of cutting-edge services designed to elevate your digital presence and business operations.
           </p>

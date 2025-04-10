@@ -6,7 +6,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto text-sm space-y-8">
         {/* Header */}
         <div className="text-center">
-          <h1 className="text-4xl font-extrabold mb-4 text-gradient">About Us</h1>
+          <h1 className="text-4xl font-extrabold pt-6 mb-4 text-gradient">About Us</h1>
           <p className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">
             Discover how KeySystem Technology Limited is shaping the future with innovative solutions in the digital banking and IT services industries.
           </p>
