@@ -30,13 +30,33 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close menu after a mobile item click
+  const closeMenuOnItemClick = () => {
+    if (menuOpen) {
+      setMenuOpen(false);
+    }
+  };
+
+  // Disable body scrolling when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'; // Disable scrolling
+    } else {
+      document.body.style.overflow = 'auto'; // Enable scrolling
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'; // Cleanup on unmount
+    };
+  }, [menuOpen]);
+
   return (
     <>
       {/* Main Navbar with scroll effect */}
       <div
         className={`${
           isScrolling ? 'bg-neutral-900 bg-opacity-80 backdrop-blur-md' : ''
-        } bg-[linear-gradient(90.18deg,_#05071E_50.58%,_#000080_79.08%,_#111A89_90.72%)] text-white fixed top-0 left-0 w-full z-50 transition-all duration-300`}
+        } bg-[linear-gradient(90.18deg,_#05071E_50.58%,_#000080_79.08%,_#111A89_90.72%)] text-white fixed top-0 left-0 w-full max-w-full z-50 transition-all duration-300`}
       >
         <div className="flex justify-between items-center px-6 py-4">
           {/* Logo */}
@@ -99,6 +119,7 @@ const Navbar = () => {
                 className={`cursor-pointer hover:text-gray-300 transition ${
                   item.name === 'Services' ? 'flex items-center gap-1' : ''
                 }`}
+                onClick={closeMenuOnItemClick} // Close menu when an item is clicked
               >
                 <Link to={item.path}>{item.name}</Link>
                 {item.name === 'Services' && <FiChevronDown size={16} />}
