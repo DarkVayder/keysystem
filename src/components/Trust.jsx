@@ -1,5 +1,5 @@
-import React from 'react';
-import { FiPlay } from 'react-icons/fi';  // Importing the play icon
+import React, { memo } from 'react';
+import { FiPlay } from 'react-icons/fi';
 import trust from "../assets/trust.png";
 
 const Trust = () => {
@@ -39,4 +39,4 @@ const Trust = () => {
   );
 };
 
-export default Trust;
+export default memo(Trust);
