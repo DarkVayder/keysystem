@@ -23,7 +23,6 @@ The **KeySystem Technology Website** is a modern, responsive website built to sh
 - **Tailwind CSS**: A utility-first CSS framework used for custom styling and responsive design.
 - **React Router**: A library used for routing and navigation within the React app.
 - **React Icons**: A library to add scalable vector icons, used in the footer for social media links.
-- **Firebase**: Used for storing posts and other backend services (if integrated).
 - **JavaScript (ES6)**: The main scripting language used for app logic and interactivity.
 
 ---
